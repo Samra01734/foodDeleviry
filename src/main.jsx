@@ -1,13 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css"; // tailwind yahan import hoti hai
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <div className="min-h-screen flex items-center justify-center bg-yellow-400">
-      <h1 className="text-5xl font-bold text-black">
-        Tailwind Yellow BG Test ✅
-      </h1>
-    </div>
+    <App />
   </React.StrictMode>
-)
+);
