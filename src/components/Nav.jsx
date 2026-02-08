@@ -5,7 +5,7 @@ import { dataContext } from '../Context/UserContext'
 import { food_items } from '../food'
 
 const Nav = () => {
-  const { input, setInput, setCate } = useContext(dataContext)
+  const { input, setInput, setCate ,showCart,setShowCart} = useContext(dataContext)
 
   useEffect(() => {
     if (input.trim() === "") {
@@ -43,7 +43,9 @@ const Nav = () => {
       </form>
 
       {/* Cart */}
-      <div className='w-[60px] h-[60px] bg-white flex justify-center items-center rounded-md shadow-xl relative'>
+      <div className='w-[60px] h-[60px] bg-white flex justify-center items-center rounded-md shadow-xl relative' onClick={()=>{
+        setShowCart(true)
+      }}>
         <span className='absolute top-0 right-2 text-green-500 font-bold text-[18px]'>0</span>
         <RiShoppingBag3Line className='w-[30px] h-[30px] text-green-500' />
       </div>
